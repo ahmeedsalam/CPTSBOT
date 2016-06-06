@@ -77,7 +77,7 @@ newbottest
 مثلا
 CPTSBOT
 بعدين انسخ التوكن
-واذهب الى هذا الملف bot.lua (config part)
+بعدين lua bot.lua (config part)
 
 ```lua
 
