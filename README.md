@@ -52,6 +52,7 @@ Github | ahmeedsalam
 
 ادخل هذا الكود واضغط انتر
 
+sudo apt-get updat
 
 ادخل هذا الكود واضغط انتر
 
