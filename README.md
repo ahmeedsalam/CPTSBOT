@@ -2,7 +2,6 @@
 
 Telegram :- 
 Developem| @amody6
-Editor| @ilwil 
 
 Github | ahmeedsalam
 # الاوامر
@@ -50,6 +49,8 @@ Github | ahmeedsalam
 `/codech @cptsch الكلام`
 
 # التنصيب
+
+ادخل هذا الكود واضغط انتر
 
 
 ادخل هذا الكود واضغط انتر
