@@ -8,61 +8,32 @@ HTTPS = require('ssl.https')
 local bot_api_key = "HERE TOKEN"
 local BASE_URL = "https://api.telegram.org/bot"..bot_api_key
 local BASE_FOLDER = ""
-local help = [[مرحبا بك🌸
-/bold الكتابة
-ارجاع bold النص
-🔹🔹🔹🔹🔹🔹🔹🔹🔹🔹
-/italic الكتابة
-ارجاع italic النص
-🔹🔹🔹🔹🔹🔹🔹🔹🔹🔹
-/link url الكتابة
-لستة روابط
-🔹🔹🔹🔹🔹🔹🔹🔹🔹🔹
-/code الكتابة
-ارجاع code الكتابة
-🔹🔹🔹🔹🔹🔹🔹🔹🔹🔹
-
--القنوات📢
-ضيف البوت للقناة وصعد للبوت ادمن واستخدم الاوامر
-
-/boldch @amody7 الكتابة
-ارسال bold كلمات بخط عريض الى القناة
-🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
-/italicch @amody5 text
-ارسال italic ا النصوص المائلة
-🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
-/linkch @amody7 الرابط والكتابة
-ارسال لستة روابط ونصوص الى القناة
-🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
-/codech @amody7 الكتابة
-ارسال code الى القناة
-🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺
--اوامر اخرى👁‍🗨
-
-تحويل ملصق🏠 الى صورة🌄 
-ارسل الملصق والبوت سيحوله اليك كصورة
-
-تحويل صورة🌅 الى ملصق🏡
-ارسل الصورة والبوت سيحولها الى ملصق
-ارسل /about لمعرفة حول البوت
-ارسل /rate لتقييم البوت
-ارسل /feedback لمراسلة مبرمج البوت
-ارسل /info لمعرفة ما يدور حول البوت
-[مبرمج الروبوت🤖](https://telegram.me/amody6) 😉
-[⏮أضغط هنا وتابع جديدنا⏭](https://telegram.me/api_cli)
-]]
-local start = [[مرحبا بك🌸 في روبوت🤖 التحويل التلقائي للوسائط⌛️ لمعرفة استخدام البوت ارسل /help]]
-local feedback = [[مرحبا بك🌸 مرة ثانية لمراسلة مبرمج البوت اضغط هنا⏮ @amody7 لمتابعة قناة البرمجة والتطوير اضغط هنا @ap-_cli]]
-local about = [[مرحبا بك🌸هو بوت🤖 عمل خطوط ضئيلة ومائلة وعمل لستة روابط🔗 مع كلمات وتحويل صورة🌄 الى ملصق🏠 وملصق🏠 الىصورة 🌄اي العكس]]
-local rate = [[يرجى تقييم البوت ووضع ⭐️⭐️⭐️⭐️⭐️ وبعدا ارسل /skip وشكرا لك🌸 
-للتقيم اضغط على↙️
-https://telegram.me/storebot?start=cptsbot]]
-local info = [[اسم المستخدم👤 = @CPTSBOT
-اسم البوت🤖 = تحويل الصورة إلى ملصقا♻️كبيرة
-ايدي🆔 = 218842495 
-استنادا لينكس-مدير الملفات :🔌D
-شكر خاص🙂 ل @amody7
-المطور😌: @amody6]]
+local start = [[HI
+`/bold text`
+return *bold* text
+`/italic text`
+return _italic_ text
+`/link url text`
+markdown link
+`/code text`
+return `code` text
+*-channel*
+*add bot to a channel then use this commands*
+`/boldch @channelusername text`
+send *bold* text to a channel
+`/italicch @channelusername text`
+send _italic_ text to a channel
+`/linkch @channelusername url text`
+send markdown link to a channel
+`/codech @channelusername text`
+send `code` text to a channel
+*-other*
+*sticker to photo* 
+_just send a sticker_
+*photo to sticker*
+_just send a photo_
+[Source](https://github.com/pAyDaAr/lua-api-bot) ;-)
+]] 
 
 -------
 
@@ -70,7 +41,7 @@ local info = [[اسم المستخدم👤 = @CPTSBOT
 
 function is_admin(msg)-- Check if user is admin or not
   local var = false
-  local admins = {123456789,987654321}-- put your id here
+  local admins = {139328010}-- put your id here
   for k,v in pairs(admins) do
     if msg.from.id == v then
       var = true
@@ -250,7 +221,7 @@ function msg_processor(msg)
 
   elseif msg.photo then
 	local matches = { (msg.photo) }
-	file = msg.photo[1].file_id
+	file = msg.photo[3].file_id
 	local url = BASE_URL .. '/getFile?file_id='..file
 	local res = HTTPS.request(url)
 	local jres = JSON.decode(res)
@@ -303,24 +274,10 @@ elseif msg.text:match("^/linkch (.*) (.*) (.*)") then
  local text = '`'..matches[2]..'`'
  local channel = matches[1]
  sendMessage(channel, text, true, false, true)
- 
-elseif msg.text:match("^/[hH]elp") then
- sendMessage(msg.chat.id, help, true, false, true)
- 
-elseif msg.text:match("^/[sS]tart") then
+
+elseif msg.text:match("^/[sS]tart") or msg.text:match("^/[Hh]elp") then
  sendMessage(msg.chat.id, start, true, false, true)
 
-elseif msg.text:match("^/feedback") then
-sendMessage(msg.chat.id, feedback, true, false, true)
-
-elseif msg.text:match("^/about") then
-sendMessage(msg.chat.id, about, true, false, true)
-
-elseif msg.text:match("^/rate") then
-sendMessage(msg.chat.id, rate, true, false, true)
-
-elseif msg.text:match("^/info") then
-sendMessage(msg.chat.id, info, true, false, true)
 return end
 
 end
