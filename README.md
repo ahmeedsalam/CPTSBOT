@@ -4,114 +4,96 @@ Telegram :-
 Developem| @amody6
 
 Github | ahmeedsalam
-# الاوامر
+# commands
 
- **ملصق الى صورة**
+ **sticker to photo**
 
-`لتحويل الملصق الى صورة فقط ارسل الملصق`
+`just send a sticker`
 
- **صورة الى ملصق**
+ **photo to sticker**
 
-`لتحويل الصورة الى ملصق فقط ارسل الصورة`
+`just send a photo`
 
-  **خط عريض**
+  **bold text**
 
-`/bold الكلمة`
+`/bold text`
 
- **خط مائل**
+ **italic text**
 
-`/italic الكلمة`
+`/italic text`
 
- **لستة روابط**
+ **markdown link**
 
-`/link url الكلمة`
+`/link url text`
 
-**خط ازرق**
+**code text**
 
-`/code الكلمة`
+`/code text`
 
-# القنوات
+# channel
 
- **ارسال كلمات بخط عريض للقناة**
+ **send bold text to a channel**
 
-`/boldch @cptsch الكلام`
+`/boldch @channelusername text`
 
- **ارسال كلام بخط مائل للقناة**
+ **send italic text to a channel**
 
-`/italicch @cptsch الكلام`
+`/italicch @channelusername text`
 
- **ارسال لستة روابط للقناة**
+ **send markdown link to a channel**
 
-`/linkch @cptsch url الكلام`
+`/linkch @channelusername url text`
 
-**ارسال خط ازرق للقناة**
+**send code text to a channel**
 
-`/codech @cptsch الكلام`
+`/codech @channelusername text`
 
-# التنصيب
+# Installation
 
-ادخل هذا الكود واضغط انتر
+1⃣-- Write>>
 
 sudo apt-get update
 
-ادخل هذا الكود واضغط انتر
+2⃣-- Write>>
 
 ```bash
 sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev make unzip git redis-server g++ libjansson-dev libpython-dev expat libexpat1-dev
 ```
-بعدها ادخل هذا الكود واضغط انتر
+3⃣-- Write>>
 `sudo apt-get install lua-socket` 
-بعدها هذا واضغط انتر
+4⃣-- Write>>
 `sudo apt-get install lua-sec`
 
-بعدها ادخل هذن الكودين واضغط انتر
+5⃣-- Write>> Clone the bot Write ⏬
 ```
 git clone https://github.com/ahmeedsalam/CPTSBOT.git
 cd CPTSBOT
 
 ```
 
-بعد التنصيب استعمل هذا الملف⬇️ فقط للتعديل
+🚸Then install bot using✅
 `lua bot.lua`
-بعدها اذهب الى فاذر بوت
-@botfahter
-اعطيه
-/newbot
-وبعدين
-newbottest
-بعدين
-معرف للبوت
-مثلا
-CPTSBOT
-بعدين انسخ التوكن
-واذهب الى هذا الملف
- م بالتعديل على هذالملفbot.lua (config part)
+👮bot token in bot.lua (config part)✔️
 
 ```lua
 
-local bot_api_key = "" -- اضع هنا التوكن ⬅️
+local bot_api_key = "" -- token
 local BASE_URL = "https://api.telegram.org/bot"..bot_api_key
-local BASE_FOLDER = "" -- لاحاجة لهذا اتركه فارغا
+local BASE_FOLDER = "" -- do not set this
 ```
+🔰And enter your telegram-id in admins table in [bot.lua](https://github.com/Imandaneshi/file-manager-bot/blob/master/bot.lua#L19) 💠
 
-بعدها اضع هنا ايدي حسابك وايدي حسابك صديقك حتى تصبحون ادمنية مثل هذا الشيء [bot.lua](https://github.com/Imandaneshi/file-manager-bot/blob/master/bot.lua#L19)
-مثل مموجود بالرابط
 ```lua
 local var = false
   local admins = {140629197,987654321}-- اضع ايديك هنا
   for k,v in pairs(admins) do
 
 ```
-بعدها
-بعدها احفظ التغيرات التي غيرتها في ملف bot.lua
+Save bot.lua Ⓜ️
 
-
-بعدها شغل عمل البوت
-
-بعدها ارسل
+Start the bot 👁
 
 `lua bot.lua`
-
 
 ##Screenshots
 
