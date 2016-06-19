@@ -5,20 +5,24 @@ URL = require('socket.url')
 JSON = require('dkjson')
 HTTPS = require('ssl.https')
 ----config----
-local bot_api_key = "HERE TOKEN"
+local bot_api_key = "" --👈put token in "heretoken"
 local BASE_URL = "https://api.telegram.org/bot"..bot_api_key
 local BASE_FOLDER = ""
 local start = [[HI
-`/bold text`
+🔸commands🔹
+bold text ✅
+/bold text
 return *bold* text
-`/italic text`
+italic text ✅
+/italic text
 return _italic_ text
-`/link url text`
-markdown link
-`/code text`
+markdown link ✅
+/link url text
+code text ✅
+/code text
 return `code` text
-*-channel*
-*add bot to a channel then use this commands*
+*-channel📣*
+*👤add bot to a channel then use this commands💠*
 `/boldch @channelusername text`
 send *bold* text to a channel
 `/italicch @channelusername text`
@@ -27,12 +31,15 @@ send _italic_ text to a channel
 send markdown link to a channel
 `/codech @channelusername text`
 send `code` text to a channel
-*-other*
-*sticker to photo* 
-_just send a sticker_
-*photo to sticker*
-_just send a photo_
-[Source](https://github.com/pAyDaAr/lua-api-bot) ;-)
+*-other💠*
+sticker🏰 to photo🌄
+just send a sticker
+
+photo🌄 to sticker🏰
+just send a photo
+[Source](https://github.com/ahmeedsalam/CPTSBOT) 👮
+[Developer](https://telegram.me/amody6) 🕵
+[CH](https://telegram.me/api_cli) 🌐
 ]] 
 
 -------
@@ -41,7 +48,7 @@ _just send a photo_
 
 function is_admin(msg)-- Check if user is admin or not
   local var = false
-  local admins = {139328010}-- put your id here
+  local admins = {140629197}-- put your id here
   for k,v in pairs(admins) do
     if msg.from.id == v then
       var = true
@@ -191,7 +198,7 @@ function bot_run()
 
 	bot = bot.result
 
-	local bot_info = "Username = @"..bot.username.."\nName = "..bot.first_name.."\nId = "..bot.id.." \nbased on linux-file-manager :D\nthx to @imandaneshi\neditor: @unfriendly"
+	local bot_info = "Username = @"..bot.username.."\nName = "..bot.first_name.."\nId = "..bot.id.." \nbased on linux-file-manager :D\nthx to @imandaneshi\neditor: @@unfriendly\nDeveloper @amody6"
 
 	print(bot_info)
 
