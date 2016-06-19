@@ -1,36 +1,36 @@
 # CPTSBOT
 
 Telegram :- 
-Developem| @amody6
+Developem| @amody6 🕵
 
-Github | ahmeedsalam
-# commands
+Github | ahmeedsalam 👮
+# 🔸commands🔹
 
- **sticker to photo**
+ **sticker🏰 to photo🌄**
 
 `just send a sticker`
 
- **photo to sticker**
+ **photo🌄 to sticker🏰**
 
 `just send a photo`
 
-  **bold text**
+  **bold text** ✅
 
 `/bold text`
 
- **italic text**
+ **italic text** ✅
 
 `/italic text`
 
- **markdown link**
+ **markdown link** ✅
 
 `/link url text`
 
-**code text**
+**code text** ✅
 
 `/code text`
 
-# channel
+# channel📣
 
  **send bold text to a channel**
 
@@ -48,7 +48,7 @@ Github | ahmeedsalam
 
 `/codech @channelusername text`
 
-# Installation
+# Installation 🔌
 
 1⃣-- Write>>
 
@@ -95,7 +95,7 @@ Start the bot 👁
 
 `lua bot.lua`
 
-##Screenshots
+##Screenshots 📸
 
 ![alt tag](http://i.imgur.com/ejbnymJ.png)
 ![alt tag](http://i.imgur.com/3Lm266Z.png)
