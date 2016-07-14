@@ -3,7 +3,7 @@
 Telegram :- 
 [Developem] (https://telegram.me/amody6)
 
-Github | ahmeedsalam 👮
+Github | (https://github.com/ahmeedsalam) 👮
 # 🔸commands🔹
 
  **sticker🏰 to photo🌄**
