@@ -1,9 +1,9 @@
 # CPTSBOT
 
-Telegram :- 
+
 [Developem] (https://telegram.me/amody6)
 
-Github | (https://github.com/ahmeedsalam) 👮
+[Github] (https://github.com/ahmeedsalam) 👮
 # 🔸commands🔹
 
  **sticker🏰 to photo🌄**
