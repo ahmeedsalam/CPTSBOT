@@ -1,7 +1,7 @@
 # CPTSBOT
 
 Telegram :- 
-Developem| @amody6 🕵
+[Developem] (https://telegram.me/amody6)
 
 Github | ahmeedsalam 👮
 # 🔸commands🔹
@@ -95,8 +95,3 @@ Start the bot 👁
 
 `lua bot.lua`
 
-##Screenshots 📸
-
-![alt tag](http://i.imgur.com/ejbnymJ.png)
-![alt tag](http://i.imgur.com/3Lm266Z.png)
-![alt tag](http://i.imgur.com/qhVkRBe.png)
